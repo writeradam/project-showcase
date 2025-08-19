@@ -9,8 +9,8 @@ The `llm-researcher` is a LangGraph implementation of a ReAct agent paradigm. It
 Available tools:
 - SERP API by BrightData
 - Web Scraper by BrightData (Web Unlocker) or Apify (RAG Web Browser)
--
-- ## Prerequisites
+
+## Prerequisites
 Prerequisites depend on the your chosen model & tools. Typical prerequisites include:
 * `OPENAI_API_KEY`
 * `FIREWORKS_API_KEY`
