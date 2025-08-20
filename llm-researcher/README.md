@@ -54,7 +54,7 @@ This means that `http3` support in the Rust dependency called `reqwest` is not y
 You can allow unstable features in a few ways. 
 
 #### How to allow unstable Rust features in Docker ####
-If you're running the code in Docker, add an `ENV` line before your build step in the `Dockerfile'
+If you're running the code in Docker, add an `ENV` line before your build step in the `Dockerfile`.
 
 ```dockerfile
 FROM rust:1.80
