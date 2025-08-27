@@ -36,9 +36,6 @@ docker save -o llm-researcher.tar llm-researcher:latest
 docker run -it -p 8000:8000 -e WORKERS=2 --rm --name llm-researcher llm-researcher:latest 
 ```
 
-## Question for Lukas ##
-#--restart on-failure puvodne patrilo k Docker kodu, ale myslim si, ze to bylo mylne
-
 ## Troubleshooting ##
 
 Trouble running the code? These fixes may help.
