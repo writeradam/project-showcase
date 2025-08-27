@@ -1,2 +1,3 @@
 # Welcome to My Portfolio #
-Browse the folders in this repo to review my QuickStarts, tutorials, and technical documentation.
+The arcade-quickstart README provides a Quickstart guide to the Python game arcade by Real Python.
+The llm-researcher README provides information about an LLM research tool by AlgOps.
