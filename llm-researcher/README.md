@@ -1,6 +1,19 @@
 # llm-researcher
 This web (&amp; file) research agent delivers seamless data collection in response to POST requests. It has a synchronous mode and an asynchronous mode.
 
+## How to Run
+Multiple workers:
+```commandline
+gunicorn main:app -b=0.0.0.0:8001 --workers=2 --timeout 60 -k uvicorn.workers.UvicornWorker
+```
+
+Docker:
+```commandline
+docker build -t llm-researcher:latest .
+docker save -o llm-researcher.tar llm-researcher:latest
+docker run -it -p 8000:8000 -e WORKERS=2 --rm --name llm-researcher llm-researcher:latest 
+```
+
 ## How it Works
 The `llm-researcher` is a LangGraph implementation of a ReAct agent paradigm. It works in two modes:
 * Synchronous: the app receives POST request, runs agent and returns results
@@ -22,19 +35,6 @@ See the **Inputs for the `/run` endpoint** section for more information.
 **Optional Prerequisites**
 * `APIFY_SCRAPER_URL`: Use the following URL to open the RAG Web Browser actor in standby mode: `https://rag-web-browser.apify.actor/search`. To set up your actor, we recommend that you create a Task through Apify's UI, which efficiently specifies RAM and other shared parameters.  
 * `APIFY_DATASET_LIMIT` (defauls to 100): This parameter sets the max number of past-run datasets to check before attempting to scrape the given URL
-
-## How to Run
-Multiple workers:
-```commandline
-gunicorn main:app -b=0.0.0.0:8001 --workers=2 --timeout 60 -k uvicorn.workers.UvicornWorker
-```
-
-Docker:
-```commandline
-docker build -t llm-researcher:latest .
-docker save -o llm-researcher.tar llm-researcher:latest
-docker run -it -p 8000:8000 -e WORKERS=2 --rm --name llm-researcher llm-researcher:latest 
-```
 
 ## Troubleshooting ##
 
