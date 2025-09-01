@@ -1,5 +1,13 @@
-# Arcade: A Primer 
-Arcade is a simple 2D game built with the Python Arcade library.
+# Arcade: A Quick Start Guide
+Arcade is a simple 2D game built with the Python Arcade library. 
+
+```
+pip install --upgrade pip
+pip install "arcade<3.0"
+python arcade_game.py
+```
+
+⚠️ Note: This will install packages into your global Python environment, which may conflict with other projects. Use a virtual environment if you plan to keep developing or modifying the game — see below.
 
 ## Overview
 
@@ -7,7 +15,7 @@ This repository provides a ready-to-run copy of the game from the [RealPython Ar
 
 This quickstart / compatibility guide is for anyone who wants to:
 - **Run the Arcade Game immediately** — follow the quickstart for an out-of-the-box working version.
-- **Modify or extend the game** — explore the code structure and use the [RealPython Arcade Primer tutorial](https://realpython.com/arcade-python-game-framework/) for detailed explanations of each part. 
+- **Modify or extend the game** — explore the code structure and use the [RealPython Arcade Primer tutorial](https://realpython.com/arcade-python-game-framework/) for detailed explanations of each part.
 
 ## What this README Adds Beyond RealPython
 
@@ -18,13 +26,6 @@ This quickstart / compatibility guide is for anyone who wants to:
 
 Note: Instructions tested on macOS and Linux; Windows users may need small path adjustments. 
 
-## Arcade Game Functionality 
-
-- Sprite movement
-- Soundtrack + sound effects
-- Collision detection
-- Score tracking 
-
 ## Prerequisites
 
 **Important!** The game has not yet (as of August 2025) been updated to Arcade 3.0 or higher. It will only run on Arcade <3.0.
@@ -32,8 +33,26 @@ Note: Instructions tested on macOS and Linux; Windows users may need small path 
 The game runs on Python version 3.7 or higher. However, if you are running Python 3.6, you can install a backport using pip:
 
 ```
-python3 -m pip install dataclasses
+python -m pip install dataclasses
 ```
+## How to Start Up Arcade in a Virtual Environment
+
+```
+git clone https://github.com/writeradam/arcade-a-primer/.git
+cd arcade-quickstart
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install "arcade<3.0"  # Arcade 2.x for tutorial compatibility
+python arcade_game.py
+```
+
+## Arcade Game Functionality 
+
+- Sprite movement
+- Soundtrack + sound effects
+- Collision detection
+- Score tracking 
 
 ## Dependencies
 
@@ -68,32 +87,6 @@ Arcade needs:
 - On Linux: you may need additional system packages like `libgl1-mesa-dev`.
 
 ---
-
-## QuickStart Instructions
-
-
-```
-git clone https://github.com/writeradam/arcade-a-primer/.git
-cd arcade-a-primer
-cd materials
-python3 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install "arcade<3.0"  # Arcade 2.x for tutorial compatibility
-python3 arcade_game.py
-```
-
-## Quick Run (No Virtual Environment)
-
-If you just want to try the game without creating a virtual environment, you can install Arcade system-wide and run it:
-
-```
-pip install --upgrade pip
-pip install "arcade<3.0"
-python3 arcade_game.py
-```
-
-⚠️ Note: This will install packages into your global Python environment, which may conflict with other projects. Use a virtual environment if you plan to keep developing or modifying the game.
 
 ## Arcade 2.x vs. 3.x Compatibility
 
